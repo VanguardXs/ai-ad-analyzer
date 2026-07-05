@@ -1,0 +1,47 @@
+[
+  {
+    "ad_name": "Founder Story VSL",
+    "spend": 4200,
+    "impressions": 210000,
+    "clicks": 6300,
+    "conversions": 189,
+    "revenue": 56700,
+    "transcript": "I built this because I was tired of paying full price for things that fell apart in a year. Every stitch, every material, every finish is chosen so you never have to think about it twice. This isn't for everyone -- it's for people who already know what they want."
+  },
+  {
+    "ad_name": "Unboxing Flex",
+    "spend": 3100,
+    "impressions": 180000,
+    "clicks": 5400,
+    "conversions": 151,
+    "revenue": 45300,
+    "transcript": "Watch the reveal. The weight, the packaging, the way it opens -- this is what it feels like to finally own the real thing. No logos screaming for attention, just the details people who know, notice."
+  },
+  {
+    "ad_name": "Concierge Experience",
+    "spend": 2600,
+    "impressions": 95000,
+    "clicks": 2850,
+    "conversions": 86,
+    "revenue": 25800,
+    "transcript": "From the moment you order to the moment it's on your wrist, someone is handling it for you. White-glove delivery, lifetime service, a direct line to a real person. This is ownership without the hassle."
+  },
+  {
+    "ad_name": "Budget Callout",
+    "spend": 900,
+    "impressions": 150000,
+    "clicks": 3000,
+    "conversions": 45,
+    "revenue": 6750,
+    "transcript": "Save 30% today only! Limited stock, don't miss this deal, prices go back up tomorrow."
+  },
+  {
+    "ad_name": "Generic Demo",
+    "spend": 700,
+    "impressions": 80000,
+    "clicks": 1200,
+    "conversions": 18,
+    "revenue": 2700,
+    "transcript": "Here's how the product works. Step one, step two, step three. Simple and easy to use."
+  }
+]

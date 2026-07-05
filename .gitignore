@@ -1,0 +1,11 @@
+.env
+chroma_db/
+*.xlsx
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+.DS_Store

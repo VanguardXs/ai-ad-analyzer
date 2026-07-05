@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ad Creative Performance Analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="masthead">
+    <h1>Ad Creative Performance Analyzer</h1>
+    <span class="pill">winners &amp; why</span>
+    <span class="tag">Find your best-performing ads, understand the creative strategy behind them, and generate new concepts to test.</span>
+  </header>
+
+  <main class="wrap">
+    <!-- Controls -->
+    <aside class="panel controls">
+      <h2>Setup</h2>
+
+      <label for="apiKey">API key</label>
+      <input type="password" id="apiKey" placeholder="Your LLM provider key" />
+      <div class="hint">Used only for this request; never stored.</div>
+
+      <label for="audience">Target audience</label>
+      <textarea id="audience" rows="5">{{TARGET_AUDIENCE}}</textarea>
+      <div class="hint">Who the creative analysis and new concepts are written for. Override to re-target the analysis.</div>
+
+      <label>Ad data (CSV or JSON)</label>
+      <div class="file-drop" id="fileDrop">
+        <span id="fileLabel">Click to choose a CSV or JSON file</span>
+        <input type="file" id="fileInput" accept=".csv,.json" hidden />
+      </div>
+      <div class="hint">Columns/fields: ad_name, spend, impressions, clicks, conversions, revenue, transcript</div>
+
+      <label for="metric">Define winners by</label>
+      <select id="metric">
+        <option>ROAS</option><option>CPA</option><option>CTR</option>
+        <option>CVR</option><option>Revenue</option>
+      </select>
+
+      <div class="row2">
+        <div>
+          <label for="topN">Top ads</label>
+          <input type="number" id="topN" value="3" min="1" max="8" />
+        </div>
+        <div>
+          <label for="minSpend">Min spend</label>
+          <input type="number" id="minSpend" value="1000" min="0" step="100" />
+        </div>
+      </div>
+
+      <button class="run" id="runBtn">Analyze ads</button>
+    </aside>
+
+    <!-- Results -->
+    <section class="results panel" style="padding:20px;">
+      <div id="results">
+        <div class="empty">
+          <div class="big">No analysis yet</div>
+          <p>Add your API key, upload a CSV or JSON file, and run the analysis.<br />
+             No data handy? Use the included <span class="mono">sample_ads.csv</span> or <span class="mono">sample_ads.json</span>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
